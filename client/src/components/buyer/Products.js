@@ -15,7 +15,7 @@ const Products = () => {
     };
 
     return (
-        <div>
+        <div className="product-list">
             <input
                 type="text"
                 placeholder="Search products by name or category"
@@ -24,9 +24,9 @@ const Products = () => {
             />
             <button onClick={handleSearch}>Search</button>
 
-            <ul>
+            <ul className="product-list">
                 {products.map(product => (
-                    <li key={product.id}>
+                    <li key={product.id} className="product-list">
                         <h3>{product.name}</h3>
                         <p>{product.description}</p>
                         <p>Price: {product.price}</p>

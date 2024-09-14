@@ -24,8 +24,9 @@ const Signup = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <input
+                className="input"
                 type="text"
                 name="name"
                 value={user.name}
@@ -33,6 +34,7 @@ const Signup = () => {
                 placeholder="Name"
             />
             <input
+                className="input"
                 type="email"
                 name="email"
                 value={user.email}
@@ -40,6 +42,7 @@ const Signup = () => {
                 placeholder="Email"
             />
             <input
+                className="input"
                 type="password"
                 name="password"
                 value={user.password}
@@ -50,7 +53,7 @@ const Signup = () => {
                 <option value="buyer">Buyer</option>
                 <option value="seller">Seller</option>
             </select>
-            <button type="submit">Sign Up</button>
+            <button className="button" type="submit">Sign Up</button>
         </form>
     );
 };

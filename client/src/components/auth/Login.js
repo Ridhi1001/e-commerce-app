@@ -23,8 +23,9 @@ const Login = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <input
+                className="input"
                 type="email"
                 name="email"
                 value={user.email}
@@ -32,13 +33,14 @@ const Login = () => {
                 placeholder="Email"
             />
             <input
+                className="input"
                 type="password"
                 name="password"
                 value={user.password}
                 onChange={handleChange}
                 placeholder="Password"
             />
-            <button type="submit">Login</button>
+            <button className="button" type="submit">Login</button>
         </form>
     );
 };

@@ -1,8 +1,7 @@
-const { Pool } = require('pg');
 const pool = require('../db');
 
 const createCartTable = async () => {
-    await pool.query(`
+  await pool.query(`
     CREATE TABLE IF NOT EXISTS cart (
       id SERIAL PRIMARY KEY,
       buyer_id INT REFERENCES users(id),
@@ -14,5 +13,5 @@ const createCartTable = async () => {
 };
 
 module.exports = {
-    createCartTable
+  createCartTable
 };

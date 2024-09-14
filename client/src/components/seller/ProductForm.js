@@ -31,28 +31,28 @@ const ProductForm = ({ product, onProductSaved }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <div>
                 <label>Product Name</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <input className="input" type="text" name="name" value={formData.name} onChange={handleChange} required />
             </div>
             <div>
                 <label>Category</label>
-                <input type="text" name="category" value={formData.category} onChange={handleChange} required />
+                <input className="input" type="text" name="category" value={formData.category} onChange={handleChange} required />
             </div>
             <div>
                 <label>Description</label>
-                <textarea name="description" value={formData.description} onChange={handleChange} required></textarea>
+                <textarea className="input" name="description" value={formData.description} onChange={handleChange} required></textarea>
             </div>
             <div>
                 <label>Price</label>
-                <input type="number" name="price" value={formData.price} onChange={handleChange} required />
+                <input className="input" type="number" name="price" value={formData.price} onChange={handleChange} required />
             </div>
             <div>
                 <label>Discount</label>
-                <input type="number" name="discount" value={formData.discount} onChange={handleChange} />
+                <input className="input" type="number" name="discount" value={formData.discount} onChange={handleChange} />
             </div>
-            <button type="submit">{product ? "Edit Product" : "Add Product"}</button>
+            <button className="button" type="submit">{product ? "Edit Product" : "Add Product"}</button>
         </form>
     );
 };

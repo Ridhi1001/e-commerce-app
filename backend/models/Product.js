@@ -1,8 +1,7 @@
-const { Pool } = require('pg');
 const pool = require('../db');
 
 const createProductTable = async () => {
-    await pool.query(`
+  await pool.query(`
     CREATE TABLE IF NOT EXISTS products (
       id SERIAL PRIMARY KEY,
       seller_id INT REFERENCES users(id),
@@ -17,5 +16,5 @@ const createProductTable = async () => {
 };
 
 module.exports = {
-    createProductTable
+  createProductTable
 };

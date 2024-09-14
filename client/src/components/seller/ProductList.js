@@ -29,7 +29,7 @@ const ProductList = () => {
     }, []);
 
     return (
-        <div>
+        <div className="product-list">
             {editingProduct ? (
                 <ProductForm product={editingProduct} onProductSaved={() => {
                     setEditingProduct(null);
@@ -40,9 +40,9 @@ const ProductList = () => {
             )}
 
             <h2>Your Products</h2>
-            <ul>
+            <ul className="product-list">
                 {products.map(product => (
-                    <li key={product.id}>
+                    <li key={product.id} className="product-list">
                         <h3>{product.name}</h3>
                         <p>{product.description}</p>
                         <button onClick={() => setEditingProduct(product)}>Edit</button>

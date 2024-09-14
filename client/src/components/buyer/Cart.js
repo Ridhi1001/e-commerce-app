@@ -27,11 +27,11 @@ const Cart = () => {
     }, []);
 
     return (
-        <div>
+        <div className="product-list">
             <h2>Your Cart</h2>
-            <ul>
+            <ul className="product-list">
                 {cartItems.map(item => (
-                    <li key={item.product_id}>
+                    <li key={item.product_id} className="product-card">
                         <h3>{item.product_name}</h3>
                         <p>Price: {item.price}</p>
                         <p>Quantity: {item.quantity}</p>
