@@ -4,6 +4,15 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+const { createUserTable } = require('./models/userModel');
+const { createProductTable } = require('./models/productModel');
+const { createCartTable } = require('./models/cartModel');
+
+createUserTable();
+createProductTable();
+createCartTable();
+
+
 const authRoutes = require('./routes/authRoutes');
 const sellerRoutes = require('./routes/sellerRoutes');
 const buyerRoutes = require('./routes/buyerRoutes');
