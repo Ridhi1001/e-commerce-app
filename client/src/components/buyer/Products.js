@@ -14,6 +14,19 @@ const Products = () => {
         }
     };
 
+    const handleAddToCart = async (productId) => {
+        try {
+            await axios.post('/api/buyer/cart', { productId }, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            alert('Product added to cart');
+        } catch (error) {
+            console.error('Error adding product to cart:', error);
+        }
+    };
+
     return (
         <div className="product-list">
             <input
@@ -31,7 +44,7 @@ const Products = () => {
                         <p>{product.description}</p>
                         <p>Price: {product.price}</p>
                         <p>Discount: {product.discount}%</p>
-                        <button>Add to Cart</button>
+                        <button onClick={() => handleAddToCart(product.id)}>Add to Cart</button>
                     </li>
                 ))}
             </ul>
