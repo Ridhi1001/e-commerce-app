@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
     return (
@@ -6,8 +7,9 @@ const Navbar = () => {
             <Link to="/">Home</Link>
             <Link to="/signup">Signup</Link>
             <Link to="/login">Login</Link>
-            <Link to="/seller">Seller Dashboard</Link>
-            <Link to="/buyer">Buyer Dashboard</Link>
+            <Link to="/cart">
+                <FaShoppingCart /> {/* Cart Icon */}
+            </Link>
         </nav>
     );
 };

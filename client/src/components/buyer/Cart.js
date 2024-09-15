@@ -6,7 +6,7 @@ const Cart = () => {
 
     const fetchCartItems = async () => {
         try {
-            const response = await axios.get('/api/buyer/cart');
+            const response = await axios.get('/cart');
             setCartItems(response.data);
         } catch (error) {
             console.error("Error fetching cart items:", error);
@@ -15,7 +15,7 @@ const Cart = () => {
 
     const handleRemoveFromCart = async (productId) => {
         try {
-            await axios.delete(`/api/buyer/cart/${productId}`);
+            await axios.delete(`/cart/${productId}`);
             fetchCartItems(); // Refresh cart after removal
         } catch (error) {
             console.error("Error removing item from cart:", error);

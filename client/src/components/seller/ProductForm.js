@@ -19,10 +19,10 @@ const ProductForm = ({ product, onProductSaved }) => {
         try {
             if (product) {
                 // Edit product
-                await axios.put(`/api/seller/edit/${product.id}`, formData);
+                await axios.put(`/edit/${product.id}`, formData);
             } else {
                 // Add product
-                await axios.post('/api/seller/add', formData);
+                await axios.post('/add', formData);
             }
             onProductSaved();
         } catch (error) {

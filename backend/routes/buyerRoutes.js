@@ -1,15 +1,16 @@
 const express = require('express');
 const { searchProducts, addToCart, removeFromCart } = require('../controllers/buyerController');
-const authenticateBuyer = require('../middleware/authenticateBuyer'); // Middleware to check if the user is a buyer
+const { authenticateBuyer } = require('../middleware/authenticateBuyer'); // Ensure this is correctly imported
+
 const router = express.Router();
 
-// Search products
+// Route to search products
 router.get('/search', searchProducts);
 
-// Add to cart
+// Route to add product to cart
 router.post('/cart', authenticateBuyer, addToCart);
 
-// Remove from cart
+// Route to remove product from cart
 router.delete('/cart/:productId', authenticateBuyer, removeFromCart);
 
 module.exports = router;

@@ -27,6 +27,6 @@ app.use('/auth', authRoutes);
 app.use('/seller', sellerRoutes);
 app.use('/buyer', buyerRoutes);
 
-app.listen(3001, () => {
-    console.log('Server running on port 3001');
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
 });

@@ -9,6 +9,7 @@ import ProductForm from './components/seller/ProductForm';
 import ProductList from './components/seller/ProductList';
 import Products from './components/buyer/Products';
 import Cart from './components/buyer/Cart';
+import SellerProductManagement from './components/seller/SellerProductManagement';
 
 function App() {
   return (
@@ -23,14 +24,14 @@ function App() {
 
           {/* Seller Routes */}
           <Route path="/seller/add-product" element={<ProductForm />} />
-          <Route path="/seller/products" element={<ProductList />} />
+          <Route path="/seller/products" element={<SellerProductManagement />} />
+          {/* <Route path="/seller/products" element={<ProductList />} /> */}
 
           {/* Buyer Routes */}
           <Route path="/search" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
 
-          {/* Default Route */}
-          <Route path="/" element={<h1>Welcome to E-Commerce</h1>} />
+
         </Routes>
       </div>
     </Router>

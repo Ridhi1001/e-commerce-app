@@ -7,7 +7,7 @@ const Products = () => {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`/api/buyer/search?query=${query}`);
+            const response = await axios.get(`/search?query=${query}`);
             setProducts(response.data);
         } catch (error) {
             console.error("Error searching products:", error);
@@ -16,7 +16,7 @@ const Products = () => {
 
     const handleAddToCart = async (productId) => {
         try {
-            await axios.post('/api/buyer/cart', { productId }, {
+            await axios.post('/cart', { productId }, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
