@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "homepage": "./",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "homepage": "./",
     "dev": "nodemon app.js"
   },
   "keywords": [],
