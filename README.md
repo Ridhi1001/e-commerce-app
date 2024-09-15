@@ -2,6 +2,8 @@
 
 An e-commerce application with seller and buyer functionalities. Sellers can add, edit, and delete products, while buyers can search for products, add them to the cart, and proceed with their orders.
 
+#Note - Backend of this project is working with various buyer and seller functionalities as well as signup and login functionalities as well authenticated. Provided a basic sample for frontend with user and signup pages and basic homepage. Some functionalities and routing is yet to be added for frontend.
+
 ## Features
 - *Authentication*: Signup/Login for both Sellers and Buyers.
 - *Seller Functionality*: Add, edit, and delete products.
